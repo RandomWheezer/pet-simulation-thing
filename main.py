@@ -7,13 +7,21 @@ class Pet:
         self.happiness = happiness
         self.energy = energy
 
+
+
+
+
 while True:
-    print("Handle your own virtual pet!")
-    name = input("What will your pet name be?")
+    print("Handle your own virtual pet")
+    pet_name =  input("What will your pet name will be? ")
+    name = Pet(name=pet_name)
     if name:
-        print(f"Your pet's name is {name}.")
+        print(f"Your pet name is {name}")
     else:
-        print("ERROR, please redo the prompt")
+        print("ERR: Please redo the prompt")
         break
-    print("Choose an option \n feed \n play \n rest \n \n status (check on your pet)")
+    print("Choose an option of your pet \n feed [ feed your pet]\n play [play with your pet]\n rest [rest your pet]\n status [show the status of your pet]\n ")
     option_input = input("Enter an option: ")
+
+    
+
