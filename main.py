@@ -12,7 +12,7 @@ class Pet:
     energy = 10
 
 
-    def play(self):
+    def play():
         if happiness<10 and energy>1 and hunger>9:
             print("You played with your pet!")
             happiness = 10
@@ -25,7 +25,7 @@ class Pet:
         else:
             print("Your pet is unable to play.")
 
-    def rest(self):
+    def rest():
         if energy == 10 and hunger != 9 and happiness != 1:
             energy = 10
             hunger = hunger+1
@@ -36,7 +36,7 @@ class Pet:
     def status(self, energy, hunger, happiness, name):
         print(f"Name: {name}\n Hunger: {hunger}\n Happiness: {happiness}\n Energy: {energy}")
 
-    def update(self):
+    def update():
         if hunger<6 and happiness<4:
             hunger = hunger+3
             happiness = happiness-3
