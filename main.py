@@ -7,9 +7,13 @@ class Pet:
         self.happiness = happiness
         self.energy = energy
 
+    hunger = 10
+    happiness = 10
+    energy = 10
+
 while True:
     print("Handle your own virtual pet!")
-    name = input("What will your pet name be?")
+    name = str(input("What will your pet name be?"))
     if name:
         print(f"Your pet's name is {name}.")
     else:
