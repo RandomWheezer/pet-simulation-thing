@@ -1,8 +1,8 @@
 
 
 class Pet:
-    def __init__(self, name, hunger, happiness, energy):
-        self.name = name
+    def __init__(self, name,  hunger, happiness, energy):
+    
         self.hunger = hunger
         self.happiness = happiness
         self.energy = energy
@@ -11,12 +11,6 @@ class Pet:
     happiness = 10
     energy = 10
 
-    def feed(self, hunger):
-        if hunger>0:
-            print("You have fed your dog.")
-            hunger = 10
-        else:
-            print("Your pet isn't hungry.")
 
     def play(self, happiness, energy, hunger):
         if happiness<10 and energy>1 and hunger>9:
@@ -43,21 +37,41 @@ class Pet:
         print(f"Name: {name}\n Hunger: {hunger}\n Happiness: {happiness}\n Energy: {energy}")
 
     def update(self, hunger, happiness):
-        if hunger<7
+        if hunger<6 and happiness<4:
             hunger = hunger+3
             happiness = happiness-3
+            print("time has passed.")
+        else:
+            print("Your pet needs more care before passing more time.")
+
+    print("Handle your own virtual pet!")
+    name = str(input("What will your pet name be?"))
+    if name:
+        print(f"Your pet's name is {name}.")
+    else:
+        print("ERROR, please rerun.")
+
 
     while True:
-        print("Handle your own virtual pet!")
-        name = str(input("What will your pet name be?"))
-        if name:
-            print(f"Your pet's name is {name}.")
-        else:
-            print("ERROR, please redo the prompt")
-            break
-        print("Choose an option \n feed \n play \n rest \n \n status (check on your pet)")
+        print("Choose an option \n feed \n play \n rest \n status (check on your pet)\n Update (pass time)")
         option_input = input("Enter an option: ")
 
+
         if option_input == "feed":
-            feed()
-        
+            if hunger == 10:
+                print("Your pet is full")
+                
+            elif hunger < 5:
+                hunger += 5
+                print("Your pet is fed")
+            else:
+                hunger += 1
+                print("Your pet is fed")
+        elif option_input == "play":
+            play()
+        elif option_input == "rest":
+            rest()
+        elif option_input == "status":
+            status()
+        elif option_input == "update":
+            update()
